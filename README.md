@@ -1,5 +1,4 @@
 # Hospital-Information-System-Web-Application
-
 📌 Project Overview
 
 The Hospital Information System (HIS) is a web-based application designed to manage hospital data efficiently. It includes user roles such as Admin, Doctor, and Patient, each with specific functionalities. The system provides an intuitive interface for managing profiles, viewing information, and handling authentication.
@@ -10,7 +9,7 @@ The Hospital Information System (HIS) is a web-based application designed to man
 
 Navigation Bar for easy access to different sections.
 
-Best 3 Doctors Section displaying top doctors.
+Best 3 Doctors Section displaying top doctors (static data).
 
 Patient Feedback section with static reviews and an option to submit feedback.
 
@@ -26,7 +25,7 @@ Views all records in a structured table.
 
 2️⃣ Doctor
 
-Can edit personal details (except name and gender).
+Can edit personal details (birth date, email, phone number).
 
 Views a list of all registered patients.
 
@@ -48,9 +47,9 @@ Responsive Design using Bootstrap.
 
 Frontend: HTML, CSS, JavaScript, Bootstrap
 
-Backend: (To be added later if required)
+Backend: To be added later if required
 
-Database: (To be integrated if needed)
+Database: To be integrated if needed
 
 📂 Project Structure
 
@@ -91,4 +90,3 @@ Your Name - GitHub Profile
 This project is open-source and available under the MIT License.
 
 Feel free to contribute and improve this project! 🚀
-
