@@ -1,0 +1,151 @@
+body {
+    background: #dddddd;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 118, 128, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    top: 0px;
+    padding: 0 20px; /* تقليل المسافات */
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px; /* تقليل المسافة بين العناصر */
+}
+
+.nav-item {
+    display: inline;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    color: gold;
+}
+
+.navbar-toggler {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    display: none; /* إخفاء زر القائمة على الشاشات الكبيرة */
+}
+
+.auth-container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    gap: 10px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 200px; /* إبعاد المربع عن الشريط العلوي */
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: rgba(0, 118, 128, 0.9);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgba(0, 118, 128, 1);
+}
+
+/* تحسين العرض في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    .auth-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .navbar-toggler {
+        display: block; /* إظهار زر القائمة على الجوال */
+    }
+
+    .collapse {
+        display: none;
+    }
+
+    .collapse.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 118, 128, 0.95);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+}

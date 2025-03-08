@@ -1,0 +1,72 @@
+/* تعيين الخط الأساسي واللون الخلفي */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* حاوية النموذج */
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* عنوان النموذج */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* تنسيق تسميات الحقول */
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* تنسيق حقول الإدخال */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* تخصيص زر الإرسال */
+button {
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 118, 128, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: rgba(0, 100, 120, 1);
+}
+
+/* رسالة الخطأ أو النجاح */
+.message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
