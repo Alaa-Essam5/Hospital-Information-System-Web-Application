@@ -1,92 +1,146 @@
 # Hospital-Information-System-Web-Application
-📌 Project Overview
+This project is a web-based Hospital Information System (HIS) designed for a specific medical department. It provides different functionalities for Admins, Doctors, and Patients to manage hospital records efficiently.
 
-The Hospital Information System (HIS) is a web-based application designed to manage hospital data efficiently. It includes user roles such as Admin, Doctor, and Patient, each with specific functionalities. The system provides an intuitive interface for managing profiles, viewing information, and handling authentication.
+Features
 
-🚀 Features
+1. Home Page
 
-🔹 Home Page
+Navigation Bar (Navbar): A fixed navbar for easy navigation between pages.
 
-Navigation Bar for easy access to different sections.
+Top 3 Doctors Section: Displays static information about three top doctors.
 
-Best 3 Doctors Section displaying top doctors (static data).
+Patient Feedback Section: Patients can write and view feedback.
 
-Patient Feedback section with static reviews and an option to submit feedback.
+Footer: Includes contact information and copyright details.
 
-Footer with hospital contact details.
+2. Profile Page
 
-🔹 User Roles
+Each user has a profile page with relevant functionalities:
 
-1️⃣ Admin
+Admin:
 
-Can add, edit, and delete doctors and patients.
+Add new doctors.
 
-Views all records in a structured table.
+Retire doctors.
 
-2️⃣ Doctor
+Remove patients.
 
-Can edit personal details (birth date, email, phone number).
+View all doctors and patients in a structured table (Name, Email, Profile Picture, Phone Number, and a Remove Button).
 
-Views a list of all registered patients.
+Doctor:
 
-3️⃣ Patient
+Edit personal details (Birth Date, Email, and Phone Number).
 
-Can edit personal details (except gender).
+View all patients in a structured table (Patient’s Name, Age, and Phone Number).
 
-Views a list of all available doctors.
+Patient:
 
-🔹 Additional Features
+Edit all personal details except Gender.
 
-Authentication System (Login/Signup) for secure access.
+View all doctors in a structured table (Doctor’s Name and Phone Number).
 
-Profile Management for each user role.
+Each user has the following attributes:
 
-Responsive Design using Bootstrap.
+Name (First + Last), Birth Date, Gender, Email, and Phone Number.
 
-🛠️ Tech Stack
+Doctors have an additional field: Level of Expertise.
+
+3. About Page
+
+Displays information about the selected medical department.
+
+Departments available:
+
+Radiology
+
+Cardiology
+
+Ophthalmology
+
+Surgery
+
+Orthopedics
+
+Dental
+
+4. Login Page
+
+Allows Admin, Doctor, and Patient to log in.
+
+Requires Email and Password for authentication.
+
+Basic JavaScript validation to check stored credentials.
+
+5. Signup Page
+
+Allows new patients to sign up.
+
+Requires Name, Birth Date, Gender, Email, Phone Number, and Password.
+
+Uses JavaScript to store and validate user data.
+
+Tools and Technologies
 
 Frontend: HTML, CSS, JavaScript, Bootstrap
 
-Backend: To be added later if required
+Backend: Node.js (or any backend framework based on user preference)
 
-Database: To be integrated if needed
+Database: MySQL / Firebase / MongoDB
 
-📂 Project Structure
+Authentication: JWT for secure login (optional bonus feature)
 
-Hospital-Information-System/
-│── index.html       # Home Page
-│── profile.html     # Profile Page for users
-│── about.html       # About Page
-│── login.html       # Login Page
-│── signup.html      # Signup Page
-│── styles.css       # CSS file for styling
-│── script.js        # JavaScript for interactivity
-└── README.md        # Project documentation
-
-🚀 How to Run the Project
+Installation
 
 Clone the repository:
 
-git clone https://github.com/your-username/hospital-info-system.git
+git clone https://github.com/your-repo/his-web-app.git
 
-Open index.html in a browser.
+Navigate to the project directory:
 
-Navigate through the system to explore features.
+cd his-web-app
 
-🎯 Future Enhancements
+Install dependencies (if using a backend framework like Node.js):
 
-Implement JWT Authentication for secure login.
+npm install
 
-Add backend support (Node.js/Python + Database).
+Run the application:
 
-Improve UI/UX design with animations.
+npm start
 
-👥 Contributors
+Open your browser and go to http://localhost:3000/.
 
-Your Name - GitHub Profile
+Usage
 
-📜 License
+Admin Login: Manage doctors and patients.
 
-This project is open-source and available under the MIT License.
+Doctor Login: Edit profile and view patient details.
 
-Feel free to contribute and improve this project! 🚀
+Patient Login: Edit profile and view doctor details.
+
+Explore Departments: Read about medical departments on the About Page.
+
+Future Enhancements
+
+Implement real-time patient feedback storage.
+
+Integrate JWT authentication for secure user login.
+
+Enhance UI design with animations and interactive components.
+
+Add an appointment booking feature.
+
+Contributing
+
+Contributions are welcome! To contribute:
+
+Fork the repository.
+
+Submit issues for bugs or feature requests.
+
+Create pull requests with improvements.
+
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
