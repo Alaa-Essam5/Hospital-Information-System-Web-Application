@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Profile</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts/profile-patient.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .navbar {
+      background: rgba(0, 118, 128, 0.9);
+      padding: 10px 20px;
+    }
+
+    .navbar-brand {
+      color: white !important;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .navbar-nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar-nav .nav-item {
+      list-style: none;
+    }
+
+    .navbar-nav .nav-link {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(0, 118, 128, 0.7);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1,
+    h3 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      object-fit: cover;
+    }
+
+    .profile-details {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .profile-details input {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 8px;
+      width: 250px;
+      margin-top: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .profile-details button {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    #edit-button {
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+    }
+
+    #save-button {
+      background-color: #ffc107;
+      color: black;
+      font-weight: bold;
+      display: none;
+    }
+
+    #patient-doctors {
+      text-align: left;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    td {
+      background-color: #f9f9f9;
+    }
+
+    @media (max-width: 768px) {
+      .profile-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+
+      .profile-details {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container2">
+    <a class="navbar-brand" href="#home">Hospital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home-patient.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="home-patient.html">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="home-patient.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile-patient.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="homeout.html">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <h1>Patient Profile</h1>
+  <div id="patient-section" class="profile-section">
+    <div class="profile-container">
+      <img id="patient-image" src="patient.jpg" alt="Patient Image" class="profile-pic">
+      <div class="profile-details">
+        <p><strong>Name:</strong> <span id="patient-name"></span></p>
+        <p><strong>Email:</strong> <input type="email" id="patient-email" disabled></p>
+        <p><strong>Phone:</strong> <input type="text" id="patient-phone" disabled></p>
+        <p><strong>Gender:</strong> <span id="patient-gender"></span></p>
+        <button id="edit-button" onclick="enablePatientEditing()">Edit</button>
+        <button id="save-button" onclick="updatePatientProfile()" style="display: none;">Save Changes</button>
+      </div>
+    </div>
+    <h3>Doctors List</h3>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+      </tr>
+      </thead>
+      <tbody id="patient-doctors">
+      <!-- Data will be inserted dynamically -->
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

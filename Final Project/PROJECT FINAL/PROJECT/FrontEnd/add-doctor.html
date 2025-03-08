@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Doctor</title>
+  <link rel="stylesheet" href="add-doctor.css">
+  <script src="scripts/profile-admin.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Add a New Doctor</h2>
+  <form id="add-doctor-form">
+    <label for="doctor-name">Full Name:</label>
+    <input type="text" id="doctor-name" name="name" required>
+
+    <label for="doctor-email">Email:</label>
+    <input type="email" id="doctor-email" name="email" required>
+
+    <label for="doctor-phone">Phone Number:</label>
+    <input type="tel" id="doctor-phone" name="phone" required>
+
+    <label for="doctor-specialty">Specialty:</label>
+    <input type="text" id="doctor-specialty" name="specialty" required>
+
+    <label for="doctor-experience">Experience (Years):</label>
+    <input type="number" id="doctor-experience" name="experience" min="0" required>
+
+    <!-- تاريخ الميلاد -->
+    <label for="doctor-birth-date">Date of Birth:</label>
+    <input type="date" id="doctor-birth-date" name="birth_date" required>
+
+    <!-- الجنس -->
+    <label for="doctor-gender">Gender:</label>
+    <select id="doctor-gender" name="gender" required>
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+    <!-- كلمة المرور -->
+    <label for="doctor-password">Password:</label>
+    <input type="password" id="doctor-password" name="password" required>
+
+    <p id="form-message" class="message"></p>
+
+    <button type="submit">Add Doctor</button>
+  </form>
+</div>
+</body>
+</html>
