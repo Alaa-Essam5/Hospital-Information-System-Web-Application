@@ -74,8 +74,7 @@ The application will be available at http://localhost:3000.
 
 🌟 Watch the Demo Video Here! 🌟📹 Click to Watch (Replace with actual video link)
 
-https://github.com/user-attachments/assets/32eb1427-6ee3-4ed2-af30-a0f00e7f4a38
-
+https://github.com/user-attachments/assets/75c57e04-6300-4ed4-b24b-efa3f3f35f3a
 
 ## 📌 Contribution Guidelines
 
