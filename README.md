@@ -1,10 +1,11 @@
-🏥 Hospital Information System (HIS) Web Application
+# 🏥 **Hospital Information System (HIS) Web App** 🏥
+---
 
 Welcome to the Hospital Information System (HIS) Web Application! This project simulates a hospital management system designed for a specific medical department. Users can manage doctors, patients, and hospital-related data with an intuitive and interactive interface.
 
 🌟 Features
 
-✅ Home Page:
+## ✅ Home Page:
 
 Navigation bar for easy access.
 
@@ -14,7 +15,7 @@ Patient Feedback Section where users can leave and view feedback.
 
 Footer with hospital contact information and legal details.
 
-✅ Profile Page (Role-Based Access):
+## ✅ Profile Page (Role-Based Access):
 
 Admin: Can add/remove doctors, remove patients, and view all doctor and patient records in a table format (Name, Email, Static Photo, Phone Number, and Control Buttons).
 
@@ -28,19 +29,19 @@ Doctors have an additional field: Level of Expertise.
 
 Edit Button: Allows users to modify their permitted data in one action within the same page.
 
-✅ About Page:
+## ✅ About Page:
 
 Displays information about a selected hospital department (Radiology, Cardiology, Ophthalmology, Surgery, Orthopedics, or Dental).
 
 Webpage design will be themed around the chosen department.
 
-✅ Login & Signup Pages:
+## ✅ Login & Signup Pages:
 
 Login Page: Allows Admins, Doctors, and Patients to sign in using credentials.
 
 Signup Page: For Patients only to create an account with Name, Birth Date, Gender, Email, Phone Number, and Password.
 
-🛠️ Tools & Technologies Used
+## 🛠️ Tools & Technologies Used
 
 Frontend: HTML, CSS, JavaScript (for form validation & UI interactions)
 
@@ -52,7 +53,7 @@ Authentication: JWT Authentication (Optional for added security)
 
 Styling: Bootstrap for a responsive and modern UI
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 1️⃣ Clone the Repository
 
@@ -69,13 +70,14 @@ npm start
 
 The application will be available at http://localhost:3000.
 
-🎮 Demo & Screenshots
+## 🎮 Demo & Screenshots
 
 🌟 Watch the Demo Video Here! 🌟📹 Click to Watch (Replace with actual video link)
 
- (Replace with actual image link)
+https://github.com/user-attachments/assets/32eb1427-6ee3-4ed2-af30-a0f00e7f4a38
 
-📌 Contribution Guidelines
+
+## 📌 Contribution Guidelines
 
 We welcome contributions! To contribute:
 
@@ -85,9 +87,9 @@ Create a new branch for your feature/fix
 
 Commit and push your changes
 
-Submit a pull request 🚀
+## Submit a pull request 🚀
 
-📜 License
+### 📜 License
 
 This project is licensed under the MIT License – see the LICENSE file for details.
 
